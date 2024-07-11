@@ -1,0 +1,42 @@
+@import "src/app/styles/fonts";
+
+.content {
+  z-index: 15000;
+}
+
+.header {
+
+  &> p {
+    @include H2;
+
+    text-transform: uppercase;
+    color: var(--main-white);
+  }
+}
+
+.main-content {
+  margin-top: 2rem;
+}
+
+.icon {
+  background-color: var(--g-700);
+  height: 125px;
+  border-radius: 100%;
+  width: 260px;
+}
+
+.description {
+  @include BodyM-400;
+
+  color: var(--main-white);
+}
+
+.link {
+  color: var(--o-400);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 2rem;
+}

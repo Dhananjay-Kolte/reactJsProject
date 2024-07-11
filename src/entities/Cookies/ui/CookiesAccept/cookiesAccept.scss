@@ -1,0 +1,36 @@
+@import "src/app/styles/fonts";
+
+.cookies-container {
+  background-color: var(--g-900);
+  width: 100%;
+  max-height: 120px;
+  position: fixed;
+  bottom: 0;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 3rem 2rem 2.563rem;
+    gap: 1rem;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 81%;
+
+      &__title {
+        @include H3;
+
+        color: var(--main-white);
+      }
+
+      &__ordinary {
+        @include BodyM-600;
+
+        color: var(--g-200);
+      }
+    }
+  }
+}

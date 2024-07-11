@@ -1,0 +1,57 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.card-main-info {
+  background-color: var(--g-900);
+  padding: 1.5rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  width: inherit;
+  position: relative;
+
+  .texts, .texts-owned {
+    @include BodyS-600;
+
+    h3 {
+      @include BodyS-600;
+      color: var(--g-300);
+    }
+
+    .link,
+    h4 {
+      @include BodyS-600;
+      color: var(--main-white);
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    .blue {
+      color: var(--b-400);
+    }
+  }
+
+  h5 {
+    @include BodyS-600;
+    color: var(--b-400);
+  }
+
+  h1 {
+    @include H5-CL;
+    color: var(--main-white);
+    max-width: 50.25rem;
+    overflow-wrap: break-word;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (width <= 480px) {
+
+  .card-main-info {
+    padding: 1.5rem 0.5rem 2rem;
+
+    h3 {
+      width: max-content;
+    }
+  }
+}

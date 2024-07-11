@@ -1,0 +1,24 @@
+@import "src/app/styles/fonts";
+
+.footer-container-tips {
+  display: flex;
+  justify-content: space-between;
+
+  &__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--main-white);
+
+    @include BodyS-400;
+
+    cursor: pointer;
+  }
+
+  &__right {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
+}

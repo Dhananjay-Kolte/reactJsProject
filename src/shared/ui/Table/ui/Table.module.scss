@@ -1,0 +1,97 @@
+@import "src/app/styles/fonts";
+
+.list-table {
+  background-color: var(--g-900);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  .th {
+    @include BodyM-XS-600;
+    color: var(--g-300);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .tb {
+    @include BodyS-600;
+    color: var(--main-white);
+
+    .row {
+      display: flex;
+      border-bottom: 1px solid var(--g-700);
+      padding: 1rem 0;
+      width: 100%;
+      text-decoration: unset;
+      color: inherit;
+
+      p {
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    .empty-table {
+      height: 100%;
+      @include BodyS-400;
+      color: var(--g-200);
+    }
+
+    .loader {
+      border: none;
+      cursor: initial;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.without-last-border {
+
+  .row:last-child {
+    border: none;
+  }
+}
+
+@media screen and (width <= 480px) {
+
+  .list-table {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 1rem;
+
+    .th {
+      width: 100%;
+      padding: 0 0 1rem;
+      gap: 1.5rem !important;
+      inline-size: fit-content;
+    }
+
+    .tb {
+      width: auto !important;
+
+      .row {
+        width: 100%;
+        gap: 1rem !important;
+      }
+
+      .loader {
+        justify-content: left;
+        margin-left: 20rem;
+      }
+    }
+  }
+
+  .list-table::-webkit-scrollbar {
+    display: none;
+  }
+
+  .itemName {
+    margin-right: 8.5rem !important;
+  }
+}

@@ -1,0 +1,84 @@
+@import "src/app/styles/fonts";
+
+@keyframes tranformer-con {
+
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    width: 20rem;
+    height: 36.5rem;
+  }
+}
+
+.groups-all-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.loadingCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+}
+
+.Items-filter {
+  width: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  button {
+    @include Btn-S-Up;
+  }
+
+  & > div:last-child {
+    padding: 0.35rem 0;
+  }
+}
+
+.Items-filter-select {
+  @include BodyM-XS-600;
+
+  text-transform: uppercase;
+  padding: 12px 16px;
+  height: 40px;
+  background: var(--g-900);
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  gap: 0.25rem;
+
+  button {
+    min-width: 1rem;
+    min-height: 1rem;
+    max-width: 1rem;
+    max-height: 1rem;
+  }
+}
+
+.Items-filter-groups {
+  display: flex;
+  gap: 0.5rem;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media screen and (width <= 480px) {
+
+  .groups-all-card {
+    justify-content: center;
+  }
+}

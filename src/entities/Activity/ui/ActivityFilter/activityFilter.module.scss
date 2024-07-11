@@ -1,0 +1,30 @@
+@import "src/app/styles/fonts";
+
+.activity-filter {
+  margin: 0.5rem 0;
+
+  .no-active-button {
+    background: var(--g-900);
+    border: 1px solid var(--g-600);
+    border-radius: 0.5rem;
+    color: var(--g-300);
+    font-size: 14px;
+    font-weight: 600;
+    width: 5.58rem;
+  }
+
+  .active-button {
+    background: var(--g-100);
+    border: 1px solid rgb(130 133 133 / 0%);
+    border-radius: 0.5rem;
+    color: var(--g-900);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.5s;
+    width: 5.58rem;
+  }
+
+  button {
+    text-transform: none;
+  }
+}

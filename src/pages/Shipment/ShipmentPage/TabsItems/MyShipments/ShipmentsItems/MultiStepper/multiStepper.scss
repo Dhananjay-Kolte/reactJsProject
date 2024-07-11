@@ -1,0 +1,59 @@
+@import "src/app/styles/fonts";
+
+.shipment-stepper {
+  margin-right: 2rem;
+  position: relative;
+
+  &__progress-bar {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper {
+      min-width: 4.5625rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+
+      &__right {
+        z-index: 2;
+        background-color: var(--g-900);
+      }
+
+      &__block-text {
+        display: flex;
+        justify-content: center;
+        min-width: 7.5rem;
+        padding: 2px 0.5rem 3px;
+        border-radius: 1rem;
+        background-color: var(--o-300);
+        color: var(--g-700);
+
+        @include BodyM-XS-600;
+
+        text-transform: uppercase;
+      }
+
+      .inactive {
+        background-color: var(--g-700);
+        color: var(--g-300);
+      }
+    }
+  }
+
+  &__progress-bar > div:first-child {
+    align-items: flex-start;
+  }
+
+  &__progress-bar > div:last-child {
+    align-items: flex-end;
+  }
+
+  &__dots {
+    width: 100%;
+    position: absolute;
+    border-top: 0.125rem dotted var(--o-300);
+    top: 0.875rem;
+  }
+}

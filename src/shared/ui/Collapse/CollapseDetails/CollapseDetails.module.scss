@@ -1,0 +1,29 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.header {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 12px 24px;
+  height: 4rem;
+  background: var(--g-900);
+  transition: border-radius 0.4s;
+}
+
+.open {
+  background: var(--g-800);
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.InfoData {
+  width: 100%;
+  background: var(--g-900);
+  padding: 1.5rem;
+  border-radius: 0 0 10px 10px !important;
+}
+
+.title {
+  color: var(--main-white);
+
+  @include H5;
+}

@@ -1,0 +1,62 @@
+@import "src/app/styles/fonts";
+
+.card-activity {
+  padding-top: 1rem;
+
+  .title {
+    padding: 1rem 2rem 1.15rem;
+    background-color: var(--g-900);
+    border-radius: 0.625rem;
+
+    h3 {
+      @include H5;
+      color: var(--main-white);
+    }
+  }
+
+  .expanded {
+    border-radius: 0.625rem 0.625rem 0 0;
+    background-color: var(--g-800);
+  }
+
+  .expanded+div {
+    margin: 0
+  }
+
+  .activity-table {
+    width: inherit;
+  }
+
+  .border {
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .header {
+    padding: 1.5rem 2rem 0;
+    background-color: var(--g-900);
+    margin: 0;
+  }
+}
+
+@media screen and (width <= 480px) {
+
+  .card-activity {
+
+    .expanded {
+      justify-content: flex-start;
+    }
+
+    .activity-table {
+      overflow: auto;
+      padding: 0;
+    }
+
+    .border {
+      width: 160vw;
+    }
+
+    .header {
+      width: 160vw;
+    }
+  }
+}

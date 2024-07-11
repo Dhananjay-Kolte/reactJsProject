@@ -1,0 +1,21 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.edit-shipment-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    width: 42rem;
+    padding: 0;
+
+    >div {
+      padding: 0;
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+}

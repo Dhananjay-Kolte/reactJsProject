@@ -1,0 +1,64 @@
+@import "src/app/styles/fonts";
+
+.cards-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0.5rem;
+  width: 100%;
+  max-width: 1416px;
+  color: white;
+
+  @include BodyS-600;
+
+  background-color: var(--g-700);
+  padding: 1.45rem 1.5rem;
+  border-radius: 1rem;
+  z-index: 10;
+
+  &__left-block {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+
+    &__selected {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+
+      &__count {
+        padding: 0.1rem 0.5rem;
+        background-color: var(--o-400);
+        border-radius: 0.5rem;
+        color: var(--main-black);
+
+        @include BodyS-600;
+      }
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+
+      &__text-button {
+        color: var(--g-200);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__right-block {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    svg {
+      fill: var(--o-500);
+    }
+  }
+}

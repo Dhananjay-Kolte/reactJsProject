@@ -1,0 +1,102 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.nft-card-details {
+  position: relative;
+
+  .more {
+    margin-top: 1rem;
+    padding: 1rem 2rem 1.15rem;
+    background-color: var(--g-900);
+    border-radius: 0.625rem;
+    cursor: pointer;
+
+    h3 {
+      @include H5;
+      color: var(--main-white);
+    }
+  }
+
+  .expanded {
+    border-radius: 0.625rem 0.625rem 0 0;
+    background-color: var(--g-800);
+  }
+
+  .card-cost-listing-buttons {
+    background-color: var(--g-900);
+    border-radius: 0 0 1rem 1rem;
+    padding: 0 2rem 2rem;
+  }
+
+  .dropdown-details {
+    background-color: var(--g-900);
+    padding: 0.5rem 1rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+    z-index: 1;
+    min-height: 24.8125rem;
+    color: var(--main-white);
+    opacity: 1;
+
+    .left {
+      padding: 1rem;
+      border-radius: 1rem;
+      width: 49%;
+
+      .header:nth-child(3) {
+        margin-top: 2rem;
+      }
+
+      .header {
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--g-300);
+
+        h3 {
+          @include BodyS-600;
+        }
+      }
+
+      .infos {
+        padding-top: 1rem;
+        @include BodyS-600;
+
+        .text-left {
+          color: var(--g-300);
+        }
+
+        .location {
+          text-align: end;
+        }
+
+        .blue {
+          color: var(--b-400);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width <= 480px) {
+
+  .nft-card-details {
+
+    .card-cost-listing-buttons {
+      padding: 0 1rem 2rem;
+      flex-wrap: wrap;
+
+      button {
+        width: 175px !important;
+      }
+    }
+
+    .dropdown-details {
+      padding: 0.5rem 0.5rem 1rem;
+
+      .left {
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}

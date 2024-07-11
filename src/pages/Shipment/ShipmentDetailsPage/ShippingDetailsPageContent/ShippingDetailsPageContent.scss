@@ -1,0 +1,189 @@
+@import "src/app/styles/fonts";
+
+.shipment-details {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 3.5rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    @include H5-CL;
+
+    color: var(--main-white);
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: inline-flex;
+    background-color: transparent;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      color: var(--main-white);
+      background-color: var(--g-900);
+      border-radius: 1rem;
+      padding: 2rem;
+      gap: 1.5rem;
+
+      &__summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>div:first-child {
+          display: flex;
+          gap: 0.5rem;
+
+          p {
+            @include H4;
+          }
+        }
+      }
+
+      &__description {
+        overflow-y: auto;
+        display: flex;
+        max-height: 18rem;
+
+        @include BodyM-400;
+
+        color: var(--g-400);
+      }
+
+      &__address {
+        background-color: var(--g-900);
+        border-radius: 1rem;
+        padding: 2rem;
+
+        &__title {
+          @include H4;
+
+          display: flex;
+          justify-content: space-between;
+          color: var(--main-white);
+
+          button {
+            @include Btn-S-Up;
+          }
+
+          &__logo {
+            display: flex;
+            gap: 0.5rem;
+          }
+        }
+
+        &__primary-text {
+          display: flex;
+          flex-direction: column;
+          padding: 0.5rem 0 0 2rem;
+          color: var(--g-400);
+
+          @include BodyM-400;
+
+          p:first-child {
+            @include BodyM-600;
+
+            color: var(--g-200);
+          }
+        }
+      }
+    }
+
+    &__right__container {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 1rem;
+
+      &__right__left {
+        display: flex;
+        gap: 1.5rem;
+        background-color: var(--g-900);
+        border-radius: 1rem;
+        padding: 2rem;
+
+        &__text-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &>div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &>div {
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+
+              &>p {
+                @include H4;
+                color: var(--main-white);
+              }
+            }
+
+            p {
+              @include BodyM-400;
+              color: var(--g-300);
+            }
+          }
+
+          .print-buttons {
+            @include B-Small;
+          }
+        }
+      }
+
+      &__qr-container {
+        display: flex;
+        justify-content: space-between;
+
+        &__qr-code {
+          width: 14rem;
+          height: 14rem;
+          border-radius: 1rem;
+          overflow: hidden;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+.p,
+.shipment-details-btn-PrintDownloadButtons {
+  margin-left: 2rem;
+}
+
+.shipment-details-btn-PrintDownloadButtons {
+  align-items: flex-start;
+
+  &>div {
+    margin-left: -1rem;
+  }
+}

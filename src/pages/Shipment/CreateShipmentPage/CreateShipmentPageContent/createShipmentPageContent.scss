@@ -1,0 +1,82 @@
+@import "src/app/styles/fonts";
+
+.create-shipment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 3.5rem;
+  gap: 1rem;
+  justify-content: center;
+
+  &__form {
+    background-color: var(--g-900);
+    width: 50%;
+    align-self: center;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__form-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &__title-text {
+        @include H4-CL;
+
+        color: var(--main-white);
+        text-transform: uppercase;
+      }
+
+      button {
+        @include Btn-S-Up;
+      }
+    }
+
+    .wrapper-inputs {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    &__checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &__label {
+        @include BodyS-400;
+        display: flex;
+        gap: 0.5rem;
+        cursor: pointer;
+
+        p {
+          color: var(--main-white);
+        }
+
+        p+p {
+          text-wrap: nowrap;
+          color: var(--o-400);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__text-input {
+      width: 100%;
+
+      p {
+        @include BodyS-600;
+
+        color: var(--main-white);
+        padding-bottom: 0.35rem;
+      }
+    }
+
+    &__button {
+      text-align: center;
+    }
+  }
+}

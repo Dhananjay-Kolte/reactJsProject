@@ -1,0 +1,220 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.card-modal {
+  margin: auto;
+  width: 46rem;
+  height: 42.25rem;
+
+  &__main-modal {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 46rem;
+
+    background: var(--g-900);
+    padding: 0.5rem;
+    border-radius: 1rem;
+
+    &.inbound {
+      width: 56rem;
+      height: 37rem;
+      margin: auto;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1.375rem 1.375rem 0 0;
+      background: var(--g-900);
+      align-items: center;
+      border-radius: 1rem;
+
+      &__close {
+        display: flex;
+      }
+    }
+
+    &__header > p {
+      @include H2;
+
+      color: var(--main-white);
+      text-transform: uppercase;
+    }
+
+    &__main-content {
+      color: var(--main-white);
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      height: 100%;
+
+      .full-info__container {
+        padding: 0 0 2rem;
+      }
+
+      &__left {
+        width: 55%;
+        padding-top: 1rem;
+      }
+
+      &__right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background: var(--g-900);
+        border-radius: 1rem;
+        padding-top: 1rem;
+
+        &__main {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          padding: 2rem;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &__description {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+
+            &__header {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+
+              h4 {
+                @include H3;
+
+                text-transform: uppercase;
+              }
+            }
+
+            &__content {
+              display: flex;
+              justify-content: space-between;
+
+              &__left {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                &__top {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.5rem;
+
+                  h3 {
+                    @include BodyS-600;
+
+                    color: var(--g-300);
+                  }
+
+                  p {
+                    @include BodyS-600;
+                  }
+                }
+              }
+
+              &__right {
+
+                &__reject {
+                  min-width: 20.625rem;
+                  background: var(--g-700);
+                  border-radius: 1rem;
+                  padding: 1.5rem;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.5rem;
+
+                  div {
+                    display: flex;
+                    gap: 0.5rem;
+
+                    @include BodyS-600;
+
+                    color: var(--o-400);
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                  }
+                }
+
+                &__reject > p {
+                  max-width: 17.625rem;
+
+                  @include BodyS-400;
+                }
+              }
+            }
+          }
+
+          &__footer-ready {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            &__header {
+              display: flex;
+
+              @include B-Small;
+
+              align-items: center;
+              cursor: pointer;
+            }
+
+            &__expand {
+              min-height: 3rem;
+            }
+
+            &__enter {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              max-width: 18.5rem;
+            }
+
+            &__empty-price {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              min-height: 2.5rem;
+
+              @include BodyS-400;
+
+              color: var(--success-500);
+              background: rgb(58 140 110 / 20%);
+              border-radius: 0.5rem;
+              padding: 0.5rem;
+            }
+          }
+
+          &__footer-reject {
+            padding: 1rem;
+            background: var(--g-700);
+            border-radius: 1rem;
+
+            p {
+              @include BodyS-600;
+
+              color: var(--o-400);
+              letter-spacing: 0.05em;
+              text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__main-modal:focus-visible {
+    outline: none;
+  }
+}
+
+.card-modal:focus-visible {
+  outline: none;
+}

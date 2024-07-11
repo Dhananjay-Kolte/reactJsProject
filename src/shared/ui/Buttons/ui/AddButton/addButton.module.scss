@@ -1,0 +1,69 @@
+@import "src/app/styles/fonts";
+
+.add-button {
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  border: 1px dashed var(--g-400);
+  color: var(--g-200);
+  padding: 1.5rem;
+  align-items: center;
+
+  svg {
+    stroke: var(--g-200);
+  }
+
+  p {
+    @include B-Small;
+    line-height: 1.5rem;
+  }
+
+  &:hover {
+    border: 1px dashed var(--g-100);
+    color: var(--g-100);
+    fill: var(--g-100);
+
+    svg {
+      stroke: var(--g-100);
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    border-color: var(--g-600);
+    background: var(--g-900);
+    color: var(--g-600);
+    fill: var(--g-600);
+
+    svg {
+      stroke: var(--g-600);
+    }
+  }
+
+  &:active {
+    background: var(--main-black-18);
+    border-color: var(--g-400);
+    color: var(--g-200);
+
+    svg {
+      stroke: var(--g-200);
+    }
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.left {
+  flex-direction: unset;
+}
+
+.right {
+  flex-direction: row-reverse;
+}

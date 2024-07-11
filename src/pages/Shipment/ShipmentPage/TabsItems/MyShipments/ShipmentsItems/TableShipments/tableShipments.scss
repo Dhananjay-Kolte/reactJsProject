@@ -1,0 +1,259 @@
+@import "src/app/styles/fonts";
+
+.table-shipment {
+  padding: 2rem 2rem 0;
+  border-top: 1px solid #000;
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    @include H4;
+
+    justify-content: space-between;
+
+    &__list {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      &__circle {
+        background: var(--g-700);
+        color: var(--o-400);
+        padding: 2px 0.5rem;
+        border-radius: 0.5rem;
+
+        @include BodyM-XS-600;
+
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__enter {
+    display: flex;
+    align-items: center;
+    min-width: 25.6rem;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .table-content-shipment {
+    display: flex;
+    flex-direction: column;
+
+    &__th {
+      display: flex;
+
+      @include BodyM-XS-600;
+
+      color: var(--g-300);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      &__frontImage {
+        display: flex;
+        align-items: center;
+        width: 9.25rem;
+      }
+
+      &__itemName {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      &__category {
+        display: flex;
+        align-items: center;
+        min-width: 13rem;
+      }
+
+      &__insuredValue {
+        display: flex;
+        align-items: center;
+        min-width: 8rem;
+        justify-content: flex-end;
+        padding-right: 2rem;
+      }
+
+      &__id {
+        display: flex;
+        align-items: center;
+        min-width: 9.75rem;
+      }
+
+      &__status {
+        display: flex;
+        align-items: center;
+        min-width: 7.5rem;
+        justify-content: flex-end;
+      }
+    }
+
+    &__loader {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__tb {
+      display: flex;
+      flex-direction: column;
+
+      @include BodyS-600;
+
+      color: var(--main-white);
+      height: 100%;
+
+      &__row {
+        display: flex;
+        border-bottom: 1px solid var(--g-700);
+        padding: 1rem 0;
+        cursor: pointer;
+
+        p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          display: box;
+          -webkit-box-orient: vertical;
+        }
+
+        &__frontImage {
+          display: flex;
+          align-items: center;
+          width: 9.25rem;
+          object-fit: cover;
+          position: relative;
+
+          &__wrapper {
+            display: flex;
+            align-items: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: var(--g-700);
+            border-radius: 0.5rem;
+            justify-content: center;
+          }
+        }
+
+        &__itemName {
+          display: flex;
+          align-items: center;
+          width: 100%;
+
+          p {
+            padding-right: 0.625rem;
+          }
+        }
+
+        &__category {
+          display: flex;
+          align-items: center;
+          min-width: 13rem;
+        }
+
+        &__insuredValue {
+          display: flex;
+          align-items: center;
+          min-width: 8rem;
+          padding-right: 2rem;
+          justify-content: flex-end;
+        }
+
+        &__id {
+          display: flex;
+          align-items: center;
+          min-width: 9.75rem;
+        }
+
+        &__status {
+          display: flex;
+          align-items: center;
+          min-width: 7.5rem;
+          justify-content: flex-end;
+        }
+      }
+
+      &__empty-table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        min-height: 20rem;
+
+        @include BodyS-400;
+
+        color: var(--g-200);
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+
+      p {
+        @include BodyS-600;
+
+        color: var(--g-500);
+        letter-spacing: -0.01em;
+      }
+
+      &__popover {
+
+        ul {
+          min-width: auto !important;
+        }
+      }
+
+      &__select {
+        padding: 0 !important;
+        background: none !important;
+        border: none !important;
+        gap: 0 !important;
+        justify-content: center;
+        @include BodyS-600;
+        color: var(--g-500) !important;
+
+        svg,
+        path {
+          fill: var(--g-500) !important;
+        }
+      }
+
+      &__items {
+        display: flex;
+        gap: 0.25rem;
+
+        p:first-child {
+          color: var(--o-400);
+        }
+      }
+    }
+
+    .left {
+      gap: 0.75rem;
+    }
+
+    .right {
+      gap: 2rem;
+    }
+
+    .arrow {
+      gap: 1.25rem;
+      padding: 0;
+    }
+  }
+}

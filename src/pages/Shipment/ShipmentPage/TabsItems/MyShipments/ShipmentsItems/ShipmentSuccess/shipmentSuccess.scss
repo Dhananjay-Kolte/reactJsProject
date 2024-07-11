@@ -1,0 +1,78 @@
+@import "src/app/styles/fonts";
+
+.shipment-success {
+
+  &__tracking-details {
+    padding: 0 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 100%;
+      gap:0.125rem;
+
+      a {
+        @include BodyS-400;
+
+        color: var(--g-100);
+        text-decoration: underline;
+        letter-spacing: -0.01em;
+        text-align: end;
+        margin-right: 2rem;
+      }
+
+      p {
+        @include BodyM-600;
+
+        color: var(--g-300);
+        width: 60%;
+        margin-top: 1.5rem;
+      }
+
+      h3 {
+        @include BodyS-600;
+
+        margin-top: 0.5rem;
+      }
+
+      h2 {
+        @include BodyS-600;
+
+        margin: 0 0 1rem;
+      }
+
+      .past {
+        margin-bottom: 0;
+      }
+    }
+
+    &__right {
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5rem;
+      justify-content: space-between;
+      align-items: flex-end;
+      min-width: 11.5rem;
+
+      &__more {
+        display: flex;
+
+        @include B-Small;
+
+        text-transform: uppercase;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

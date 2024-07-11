@@ -1,0 +1,45 @@
+@import "src/app/styles/fonts";
+
+.welcome {
+  height: 100vh;
+
+  .left {
+    height: 100%;
+    width: 45%;
+    max-height: 55.25rem;
+
+    .content {
+      padding: 2.5rem;
+      color: var(--main-white);
+      height: 100%;
+      background-color: var(--g-700);
+      border-radius: 1rem;
+
+
+      &>div>h1 {
+        padding-top: 1rem;
+        @include H1-CL;
+        letter-spacing: -0.02em;
+
+        span {
+          color: var(--o-400);
+        }
+      }
+
+      &>div>p {
+        @include BodyL-400;
+        letter-spacing: -0.01em;
+        margin-bottom: 3rem;
+        width: 87%;
+      }
+    }
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 1rem;
+    width: 55%;
+    max-height: 55.25rem;
+    background-color: var(--b-400);
+  }
+}

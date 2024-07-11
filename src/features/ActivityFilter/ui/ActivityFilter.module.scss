@@ -1,0 +1,9 @@
+@import "src/app/styles/fonts";
+
+.ActivityFilter {
+
+  .input {
+    padding: 0.375rem 0.5rem !important;
+    @include BodyS-400;
+  }
+}

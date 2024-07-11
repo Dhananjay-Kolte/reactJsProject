@@ -1,0 +1,83 @@
+@import "./fonts";
+@import "./mixinScroll";
+@import "./normalizeReset";
+@import "./themes/dark";
+@import "./variables/global";
+
+* {
+  @include scroll-8;
+}
+
+html {
+  @include scroll-8;
+  background: #121212;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Manrope, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: clash-display;
+  font-weight: 600;
+  src:
+    local("clash-display"),
+    url("./fonts/ClashDisplay-Variable.ttf") format("woff");
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  print-color-adjust: exact;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.snackbars-container {
+  width: 100%;
+  position: relative;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.orange {
+  background: var(--o-400);
+  fill: var(--secondary-dark-blue);
+}
+
+.blue {
+  background: var(--b-400);
+  fill: var(--secondary-blue);
+}
+
+.green {
+  background: var(--main-green);
+  fill: var(--success-500);
+}
+
+.red {
+  background: var(--error-500);
+  fill: var(--error-700);
+}
+
+.white-blue {
+  background-color: var(--info-300);
+}
+
+.blue-text {
+  color: var(--b-400) !important;
+}
+
+@media screen and (width <= 480px) {
+
+  .App {
+    width: 100vw;
+  }
+}

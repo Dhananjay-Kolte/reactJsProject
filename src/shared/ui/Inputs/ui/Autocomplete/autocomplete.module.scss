@@ -1,0 +1,13 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.button {
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background: inherit;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  fill: var(--g-100);
+}

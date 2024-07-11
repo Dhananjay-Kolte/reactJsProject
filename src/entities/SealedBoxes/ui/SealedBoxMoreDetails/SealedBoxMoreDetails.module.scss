@@ -1,0 +1,32 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.header {
+  border-bottom: 1px solid var(--g-600);
+  padding-bottom: 0.5rem;
+}
+
+.firstItem {
+  padding-top: 0.5rem;
+}
+
+.title {
+  @include BodyS-600;
+
+  color: var(--main-white);
+}
+
+.descriptionText {
+  max-height: 6.5rem;
+  overflow-y: scroll;
+  padding-right: 2.5rem;
+}
+
+.infoWrapper {
+  max-height: 121px;
+}
+
+button {
+  min-width: unset !important;
+  min-height: unset !important;
+}

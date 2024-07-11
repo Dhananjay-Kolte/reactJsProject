@@ -1,0 +1,9 @@
+export { default as CopyLinkCircleSVG } from './CopyLinkCircle';
+export { default as TwitterCircleSVG } from './TwitterCircle';
+export { default as TwitterSVG } from './Twitter';
+export { default as FacebookCircleSVG } from './FacebookCircle';
+export { default as FacebookSVG } from './Facebook';
+export { default as TelegramCircleSVG } from './TelegramCircle';
+export { default as TelegramSVG } from './Telegram';
+export { default as WhatsappCircleSVG } from './WhatsappCircle';
+export { default as WhatsappSVG } from './Whatsapp';

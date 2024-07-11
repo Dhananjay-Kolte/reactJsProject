@@ -1,0 +1,78 @@
+@import "src/app/styles/fonts";
+
+.page {
+  background: var(--main-black);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.loader {
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  cursor: wait;
+}
+
+.content {
+  background: var(--g-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 2rem;
+  border-radius: 1rem;
+
+  p {
+    @include BodyM-600;
+
+    color: var(--g-200);
+  }
+}
+
+.progress {
+  width: 500px;
+  height: 8px;
+  /* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-mask: linear-gradient(90deg, green 164px, #0000 0) left/34% 100%;
+  background: linear-gradient(var(--o-400) 0 0) left/0% 100% no-repeat var(--g-600);
+  animation: progresss 1.5s infinite steps(4);
+  border-radius: 100px;
+  z-index: 110;
+}
+
+@keyframes progresss {
+
+  100% {
+    background-size: 134% 100%;
+  }
+}
+
+@media screen and (width <= 480px) {
+
+  .page {
+    width: 100vw;
+  }
+
+  .loader {
+    width: 100vw;
+  }
+
+  .content {
+    width: 100vw;
+
+    svg {
+      width: 100vw !important;
+    }
+  }
+
+  .progress {
+    width: 90vw;
+  }
+}

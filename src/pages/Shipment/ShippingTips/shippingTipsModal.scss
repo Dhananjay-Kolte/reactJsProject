@@ -1,0 +1,144 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.shipping-modal {
+  padding: 3rem;
+
+  &__main-modal {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: var(--g-900);
+    width: 69rem;
+    padding: 2.5rem;
+    border-radius: 1.125rem;
+    margin: 0 auto;
+    outline: none;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    &__header > p {
+      @include H1;
+
+      text-transform: uppercase;
+      color: var(--main-white);
+    }
+
+    &__content {
+      color: var(--main-white);
+
+      &__main-text {
+        @include BodyM-400;
+
+        color: var(--g-200);
+        padding: 0 1.5rem 1.5rem 0;
+      }
+
+      &__img-tips {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+
+        img {
+          width: 29.5rem;
+          height: 29.5rem;
+        }
+
+        &__tips-items {
+          display: flex;
+          flex-direction: column;
+          width: 54%;
+          justify-content: space-between;
+
+          &__wrapper {
+            display: flex;
+            flex-direction: column;
+            border-radius: 1rem;
+
+            &__tip-variant {
+
+              &__list {
+                display: none;
+              }
+
+              &__chosen-green,
+              &__chosen-orange,
+              &__chosen-blue {
+                border-radius: 0.75rem;
+                overflow: hidden;
+                border: 1px solid var(--g-600);
+
+                @include BodyM-600;
+
+                &:not(:last-child) {
+                  margin-bottom: 1rem;
+                }
+
+                &__header {
+                  padding: 1rem 1rem 0;
+                  border: none;
+                }
+
+                &__list {
+
+                  p {
+                    @include BodyM-XS-400;
+                  }
+
+                  p:nth-child(1) {
+                    padding-bottom: 1rem;
+                  }
+
+                  padding: 0 1rem 1rem;
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+
+              &__chosen-green {
+
+                &__header {
+                  color: var(--main-green);
+                }
+              }
+
+              &__chosen-orange {
+
+                &__header {
+                  color: var(--o-400);
+                }
+              }
+
+              &__chosen-blue {
+
+                &__header {
+                  color: var(--b-400);
+                }
+              }
+
+              &__header {
+                padding: 1rem;
+                border: 1px solid var(--g-600);
+                border-radius: 0.75rem;
+
+                @include BodyM-600;
+              }
+
+              &:not(:last-child) {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.shipping-modal:focus-visible {
+  outline: none;
+}

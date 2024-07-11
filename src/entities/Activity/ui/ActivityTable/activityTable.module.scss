@@ -1,0 +1,32 @@
+@import "src/app/styles/fonts";
+
+.images {
+  object-fit: cover;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--g-700);
+  border-radius: 0.5rem;
+  position: relative;
+  min-width: 3.5rem;
+}
+
+.table-link {
+  color: var(--b-400);
+  cursor: pointer;
+}
+
+.empty {
+  @include BodyM-600;
+  color: var(--g-300);
+  min-height: 4rem;
+  background-color: var(--g-900);
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+
+@media screen and (width <= 480px) {
+
+  .empty {
+    padding-left: 5rem;
+    justify-content: flex-start;
+  }
+}

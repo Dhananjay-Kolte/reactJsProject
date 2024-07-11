@@ -1,0 +1,28 @@
+@import "src/app/styles/fonts";
+
+.sorting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+
+  &__search {
+    width: 100%;
+  }
+
+  &__switcher {
+    display: flex;
+  }
+}
+
+@media screen and (width <= 480px) {
+
+  .sorting-header {
+    flex-wrap: wrap;
+
+    &__search {
+      width: 18rem;
+    }
+  }
+}

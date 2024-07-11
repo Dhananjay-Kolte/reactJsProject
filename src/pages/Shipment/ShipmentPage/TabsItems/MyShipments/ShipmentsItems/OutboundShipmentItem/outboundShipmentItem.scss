@@ -1,0 +1,138 @@
+@import "src/app/styles/fonts";
+
+.outbound-shipment {
+
+  &__tracking-details {
+    padding: 0 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 13.75rem;
+
+      &__top {
+        display: flex;
+        gap: 4.5rem;
+        padding: 2rem 0 2.5rem;
+        margin-right: 2rem;
+
+        span {
+          @include BodyS-600;
+
+          color: var(--main-white);
+        }
+
+        &__address {
+          display: flex;
+          flex-direction: row !important;
+          gap: 2rem;
+
+          div {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        &__delivery {
+
+          .trackingNumber {
+            display: flex;
+            align-items: center;
+            gap: 0.125rem;
+          }
+        }
+
+        &__delivery > div {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &__payment {
+
+          &__delivery-separated,
+          & > div {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 0.125rem;
+          }
+
+          &__delivery-separated {
+
+            &__status svg {
+              margin-right: 0 !important;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+
+        &__payment > div > div > svg {
+          margin-right: 0.5rem;
+        }
+      }
+
+      &__top > div {
+        display: flex;
+        flex-direction: column;
+        min-width: 16.8rem;
+      }
+
+      p {
+        @include BodyS-600;
+
+        color: var(--g-300);
+      }
+
+      &__comment {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding-bottom: 1.5rem;
+
+        &__title,
+        &__comment-text,
+        &__button {
+          @include BodyS-600;
+        }
+
+        &__title {
+          color: var(--g-300);
+        }
+
+        &__comment-text {
+          color: var(--main-white);
+        }
+
+        &__button {
+          color: var(--b-400);
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__invoice {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__separator {
+    background-color: var(--main-black);
+    height: 0.125rem;
+    width: 100%;
+  }
+}

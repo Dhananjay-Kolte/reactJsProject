@@ -1,0 +1,9 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.allCards-page {
+  flex-direction: column;
+  gap: 0;
+  padding: 8rem 2rem 3.5rem;
+  justify-content: flex-start;
+}

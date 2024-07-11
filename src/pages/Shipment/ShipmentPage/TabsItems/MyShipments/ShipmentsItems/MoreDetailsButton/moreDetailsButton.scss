@@ -1,0 +1,17 @@
+@import "src/app/styles/fonts";
+
+.more-button {
+  display: flex;
+
+  @include B-Small;
+
+  text-transform: uppercase;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

@@ -1,0 +1,43 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.offers-history {
+  padding-top: 1rem;
+
+  .title {
+    padding: 1rem 2rem 1.15rem;
+    background-color: var(--g-900);
+    border-radius: 0.625rem;
+
+    h3 {
+      @include H5;
+      color: var(--main-white);
+    }
+  }
+
+  .border {
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .date {
+    @include BodyS-600;
+  }
+
+  .from {
+    color: var(--b-400);
+    cursor: pointer;
+  }
+
+  .expanded {
+    border-radius: 0.625rem 0.625rem 0 0;
+    background-color: var(--g-800);
+  }
+
+  .empty {
+    @include BodyM-600;
+    color: var(--g-300);
+    min-height: 4rem;
+    background-color: var(--g-900);
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}

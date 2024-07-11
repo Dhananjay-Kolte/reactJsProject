@@ -1,0 +1,50 @@
+@import "src/app/styles/fonts";
+
+.cancel-shipment {
+
+  &__tracking-details {
+    padding: 0 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        @include BodyM-400;
+
+        opacity: 0.6;
+        width: 60%;
+        margin-top: 1.5rem;
+      }
+
+      h2 {
+        @include BodyS-600;
+
+        margin: 0 0 1rem;
+      }
+
+      h3 {
+        @include BodyS-600;
+
+        margin-top: 0.5rem;
+      }
+    }
+
+    &__right {
+      border-left: 1px solid var(--g-600);
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "src/app/styles/fonts";
+
+.main-info {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  background-color: var(--g-900);
+  border-radius: 1rem;
+
+  form {
+    padding: 2rem;
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: var(--main-white);
+
+    h5 {
+      @include BodyS-600;
+      min-width: 9rem;
+    }
+
+    .discoverable {
+      @include BodyM-400;
+      color: var(--g-300);
+      width: auto;
+    }
+
+    .buttons {
+      padding: 0.5rem 0 0 9rem;
+
+      button {
+        width: 12rem;
+      }
+    }
+
+    .border {
+      background: var(--g-600);
+      margin: 1rem 0 1.5rem;
+      height: 1px;
+      width: 100%;
+    }
+
+    .address {
+
+      p {
+        @include BodyM-400;
+        color: var(--main-white);
+      }
+
+      p+p {
+        @include BodyS-600;
+        color: var(--g-400);
+      }
+    }
+
+    .default {
+      background: var(--main-green);
+      border-radius: 0.75rem 0;
+      padding: 0.25rem 0.75rem;
+      @include BodyM-XS-600;
+      letter-spacing: 0.08em;
+      color: var(--g-700);
+      margin-right: 2rem;
+    }
+
+    .ghost {
+      @include Btn-S-Up;
+    }
+  }
+}

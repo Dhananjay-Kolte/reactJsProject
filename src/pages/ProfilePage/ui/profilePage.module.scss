@@ -1,0 +1,8 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.my-profile-page {
+  flex-direction: column;
+  padding: 7rem 2rem 3.5rem;
+  gap: 0;
+}

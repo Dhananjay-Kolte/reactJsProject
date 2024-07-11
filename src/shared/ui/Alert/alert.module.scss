@@ -1,0 +1,60 @@
+@import "src/app/styles/fonts";
+
+.alert {
+  border-radius: 0.75rem;
+
+  h3 {
+    color: var(--main-0-white);
+    @include H5;
+  }
+
+  p {
+    @include BodyM-XS-400;
+  }
+}
+
+.large {
+  padding: 1.5rem 1rem;
+
+  svg {
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+  }
+
+  p {
+    @include BodyS-400;
+  }
+}
+
+.small {
+  padding: 0.75rem 1rem;
+
+  svg {
+    min-width: 1rem;
+    min-height: 1rem;
+  }
+
+  p {
+    @include BodyM-XS-400;
+  }
+}
+
+.success {
+  background-color: rgb(58 140 110 / 20%);
+  color: var(--success-500);
+}
+
+.info {
+  background-color: rgb(59 99 139 / 20%);
+  color: var(--info-500);
+}
+
+.warning {
+  background-color: rgb(255 153 0 / 12%);
+  color: var(--warning-500);
+}
+
+.error {
+  background-color: rgb(255 68 69 / 15%);
+  color: var(--error-500);
+}

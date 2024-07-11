@@ -1,0 +1,82 @@
+@import "src/app/styles/fonts";
+
+.popup {
+  position: relative;
+}
+
+.trigger {
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  border-radius: 0.5rem;
+  background-color: var(--g-700);
+  padding: 0.5rem;
+  position: absolute;
+  margin-top: 0.5rem;
+  z-index: 999;
+  outline: none;
+  max-height: 16rem;
+  overflow: hidden auto;
+  box-shadow: 0 24px 48px 16px rgb(0 0 0 / 28%),
+    0 8px 20px 0 rgb(0 0 0 / 12%);
+
+  &::-webkit-scrollbar {
+    border-radius: 0.5rem;
+  }
+}
+
+.item {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--main-white);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  fill: var(--main-white);
+  text-wrap: nowrap;
+}
+
+.active {
+  background: var(--g-600) !important;
+  border-radius: 0.375rem;
+}
+
+.selected {
+  background: var(--g-500) !important;
+  border-radius: 0.375rem;
+}
+
+.disabled {
+  color: var(--g-500);
+  fill: var(--g-500);
+  cursor: initial;
+}
+
+.small {
+  padding: 0.5rem 0.75rem;
+  @include BodyS-600;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.large {
+  padding: 0.75rem 1rem;
+  @include BodyS-600;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

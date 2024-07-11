@@ -1,0 +1,22 @@
+@import "src/app/styles/fonts";
+@import "src/app/styles/mixinScroll";
+
+.shipment-page {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem 3.5rem;
+
+  &__header {
+    position: sticky;
+    top: 4.4rem;
+    padding-bottom: 1rem;
+    background: var(--main-black);
+    z-index: 5;
+  }
+
+  &__info {
+    padding: 1rem 2rem 3.5rem;
+  }
+}

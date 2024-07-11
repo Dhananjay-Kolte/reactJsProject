@@ -1,0 +1,95 @@
+@import "src/app/styles/fonts";
+
+.checkbox {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+
+.checkbox input[type="checkbox"] {
+  width: auto;
+  /* stylelint-disable-next-line number-max-precision */
+  opacity: 0.00000001;
+  position: absolute;
+  left: 0;
+  margin-left: -20px;
+}
+
+.checkbox label {
+  position: relative;
+  min-height: 1.25rem;
+  display: block;
+  padding-left: 2.25rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: sub;
+}
+
+.checkbox label::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  margin: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.2s ease;
+  border-radius: 4px;
+  color: var(--g-300);
+  background: var(--g-500);
+}
+
+.checkbox label:hover::before {
+  background: var(--g-300);
+  outline: 6px solid rgb(255 255 255 / 5%);
+
+}
+
+.checkbox label::after {
+  content: "";
+  display: block;
+  width: 0.75rem;
+  height: 0.3125rem;
+  border-bottom: 2.5px solid var(--main-black);
+  border-left: 2px solid var(--main-black);
+  transform: rotate(-45deg) scale(0);
+  transition: transform ease 0.2s;
+  will-change: transform;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+}
+
+.checkbox input[type="checkbox"]:checked~label::before {
+  background: var(--o-400);
+}
+
+.checkbox input[type="checkbox"]:checked:active~label::before {
+  outline: 6px solid rgb(255 124 1 / 10%);
+}
+
+.checkbox input[type="checkbox"]:checked~label::after {
+  transform: rotate(-46deg) scale(0.9);
+  transition: transform ease 0.2s;
+}
+
+.checkbox label span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkbox input[type="checkbox"]:focus+label::before {
+  outline: 0;
+}
+
+.error {
+  position: absolute;
+  left: 0;
+  top: 2rem;
+  color: var(--red);
+  display: none;
+}
+
+input:invalid[aria-invalid="true"]~.error {
+  display: block;
+}

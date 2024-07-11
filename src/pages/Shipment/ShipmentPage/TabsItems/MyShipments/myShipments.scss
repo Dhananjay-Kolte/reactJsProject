@@ -1,0 +1,55 @@
+@import "src/app/styles/fonts";
+
+.my-shipments {
+  height: 100%;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 2.5rem;
+    position: sticky;
+    top: 6.2rem;
+    background: var(--main-black);
+    z-index: 5;
+
+    h4 {
+      @include H2;
+
+      color: var(--main-white);
+      text-transform: uppercase;
+    }
+  }
+
+  &__tiny {
+    color: var(--main-white);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__item {
+      background-color: var(--g-900);
+      border-radius: 1rem;
+    }
+  }
+
+  &__empty {
+    min-height: 35rem;
+    background: var(--g-900);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    @include BodyS-400;
+
+    color: var(--g-200);
+
+    p {
+      text-align: center;
+    }
+  }
+}

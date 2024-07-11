@@ -1,0 +1,66 @@
+@import "src/app/styles/fonts";
+
+.card-panel-burned {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 1rem 1rem 0 0;
+  height: 3rem;
+  z-index: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__socials {
+    position: absolute;
+    left: 0;
+    top: 3rem;
+    width: 100%;
+    background-color: var(--g-700);
+    padding: 0.5rem;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0.5rem 0 0.5rem 0.5rem;
+      border-radius: 0.375rem;
+
+      &:hover {
+        background-color: var(--g-600);
+      }
+
+      &__name {
+        color: white;
+
+        @include BodyS-400;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    width: 100%;
+    padding: 0.863rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    &__element {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 0.25rem;
+      fill: var(--g-200);
+
+      &:hover {
+        background-color: var(--o-300);
+        fill: var(--main-black);
+      }
+    }
+  }
+}

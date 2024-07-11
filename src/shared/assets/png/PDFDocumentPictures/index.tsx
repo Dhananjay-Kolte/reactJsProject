@@ -1,0 +1,10 @@
+export { default as Point1 } from './Pictures/1.png';
+export { default as Point2 } from './Pictures/2.png';
+export { default as Point3 } from './Pictures/3.png';
+export { default as Point4 } from './Pictures/4.png';
+export { default as Point5 } from './Pictures/5.png';
+export { default as Point6 } from './Pictures/6.png';
+export { default as Point7 } from './Pictures/7.png';
+export { default as LogoWhite } from './Pictures/LogoWhite.png';
+export { default as SmallBox } from './Pictures/SmallBox.png';
+export { default as Location } from './Pictures/Location.png';

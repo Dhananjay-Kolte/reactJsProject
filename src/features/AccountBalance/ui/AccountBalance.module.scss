@@ -1,0 +1,39 @@
+@import "src/app/styles/fonts";
+
+.AccountBalance {
+  width: 100%;
+  background-color: var(--g-900);
+  border-radius: 1rem;
+  min-height: 430px;
+  padding: 2.5rem 2.5rem 6rem;
+  margin-top: 0.5rem;
+}
+
+.title {
+  color: #FFF;
+  @include H4-CL;
+}
+
+.balance {
+  border: 1px solid var(--g-600);
+  border-radius: 12px;
+  padding: 0 4px;
+
+  &>:first-child {
+    border-right: 1px solid var(--g-600);
+  }
+}
+
+.item {
+  padding: 20px 32px 20px 24px;
+}
+
+.name {
+  @include H5;
+  color: var(--g-50);
+}
+
+.value {
+  color: var(--g-200);
+  @include BodyS-600;
+}
